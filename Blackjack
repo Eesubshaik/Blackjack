@@ -1,5 +1,4 @@
 import random
-
 # setting values of global variables
 suits = ("Hearts", "Diamonds", "Spades", "Clubs")
 ranks = (
@@ -12,7 +11,6 @@ chips = 100
 game_num = 0
 game_on = True
 
-
 class Card:
     def __init__(self, suit, rank):
         self.suit = suit
@@ -21,7 +19,6 @@ class Card:
 
     def __str__(self):
         return self.rank + " of " + self.suit
-
 
 class Deck:
     def __init__(self):
@@ -37,8 +34,6 @@ class Deck:
     def deal_one(self):
         # we remove one card from the list of all_cards
         return self.all_cards.pop()
-
-
 def check_king(card):
     """
     function to check for king and adjust its value according to the user
@@ -60,12 +55,8 @@ def check_king(card):
             else:
                 print("choose valid value.")
                 continue
-
-
 print("\n" * 100)  # clears up the terminal for a cleaner look
-
 print("""Blackjack """)
-
 print(
     """
 BlackJack is very popular card game mainly played in casinos around the world.
@@ -271,5 +262,3 @@ while game_on:
         print(f"Following error occurred : {error} \nPlease try again.")
         game_num -= 1  # round with error won't be counted
         continue
-
-
